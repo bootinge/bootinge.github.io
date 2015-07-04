@@ -230,3 +230,16 @@ class RemovalServiceTestCase(unittest.TestCase):
 
         mock_os.remove.assert_called_with("any path")
 ```
+
+# 테스트시 주의할 점.
+## 시나리오 기반 테스트
+- testscenarios 모듈을 기반으로 한 테스트를 하지 말것.
+
+> Edit 2/7/2012: This is a moderately **bad approach to the problem**. While an interesting hack I highly discourage using this in a production environment. If you want this approach in python I recommend checking out the **lettuce** project for a much more sane approach.
+
+## Cucumber 사용
+-  Cucumber를 사용할 경우 feature 문서를 변경하면 StepDefinitions 소스 코드까지 수정해야 하기 때문에 유지보수 비용이 좀 발생할 듯하다.
+- 프로그래머 레벨에서는 cucumber를 사용하지 마라.
+> - 많은 프로그래머들이 cucumber를 integration test로 잘못 사용하고 있다.
+  - cucumber의 용도는 보다 하이 레벨의 분석툴이며, 이를 acceptance test용으로 사용하기에는 프로그래머 입장에선 불편한 점이 많다.
+  - 당신이 프로그래머라면 cucumber를 integration test로 사용하면서 불편하게 살지 말고, 그럴 바에야 acceptance test 안한다는거 인정하고 Capybara 같은 pure integration test 도구를 사용해라.
