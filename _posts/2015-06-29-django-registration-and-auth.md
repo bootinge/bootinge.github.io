@@ -65,7 +65,7 @@ EMAIL_HOST_PASSWORD=''
 .
 
 ```
-$ pip install django_smtp_ssl
+$ pip install django-smtp-ssl
 ```
 
 - 사용할 SMTP 서버 정보 설정.
@@ -229,3 +229,23 @@ $ curl -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZ
 - [사이트](http://django-rest-auth.readthedocs.org/en/latest/installation.html)
 - Django에 Rest Framework와 Auth를 연동시켜둔 모듈
 - Demo Project를 따라해보면, 어떤식으로 페이지를 구성할 수 있을지 알 수 있음.
+
+## Django-Rest-Auth with AngularJS
+[사이트](https://github.com/Tivix/angular-django-registration-auth)
+- AngularJS와 Django-Rest-Auth를 결합한 샘플 프로젝트
+
+> 참고 : CORS 오류(Access-Control-Allow-Origin) 발생시.
+- settings.py에 추가
+```
+CORS_ORIGIN_ALLOW_ALL = True
+INSTALLED_APPS = (
+  ...
+  'corsheaders',
+  ...
+)
+MIDDLEWARE_CLASSES = (
+  ...
+  'corsheaders.middleware.CorsMiddleware',
+  ...
+)
+```
