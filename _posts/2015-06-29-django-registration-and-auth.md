@@ -41,6 +41,7 @@ urlpatterns = patterns('',
 ```
 
 ## SMTP 서버 테스트하기
+- Registration 과정 중에 E-mail Verification이 있음.
 - Python의 기본 모듈을 통해서 임의의 SMTP 서버를 띄울 수 있음.
   - 아래 명령어는 1025번 포트로 smtp 서버를 띄움
 

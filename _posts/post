@@ -1,0 +1,12 @@
+filename=`date +"%Y-%m-%d"`-$1.md
+touch $filename
+
+echo "---" >> $filename
+echo "layout: default" >> $filename
+echo "title: $1" >> $filename
+echo "---" >> $filename
+
+echo "# $1" >> $filename
+echo "**$1** Contents [here](http://bootinge.github.io)" >> $filename
+
+open $filename
