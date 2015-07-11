@@ -223,3 +223,9 @@ urlpatterns = patterns('',
 $ curl -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcl9pZCI6MSwiZW1haWwiOiJhZG1pbkBuYXZlci5jb20iLCJleHAiOjE0MzU1MDgwNjJ9.Zd9MSdA41HYJTAjW7JEMsK3TUv5EYXAj5X0S1IdKwFY" http://127.0.0.1:8000/restricted/
 
 ```
+-------
+# 참고
+## Django-Rest-Auth
+- [사이트](http://django-rest-auth.readthedocs.org/en/latest/installation.html)
+- Django에 Rest Framework와 Auth를 연동시켜둔 모듈
+- Demo Project를 따라해보면, 어떤식으로 페이지를 구성할 수 있을지 알 수 있음.
